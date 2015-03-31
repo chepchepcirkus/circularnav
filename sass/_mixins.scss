@@ -1,0 +1,16 @@
+@mixin item($nb-child:5){
+  
+  .mixin-loop ($nb-child) 
+}
+
+.mixin-loop ($i) when ($i > 0) {
+
+  .csstransforms .cn-wrapper li:nth-child($i) {
+    -webkit-transform: rotate(-10deg) skew(50deg);
+    -ms-transform: rotate(-10deg) skew(50deg);
+    -moz-transform: rotate(-10deg) skew(50deg);
+    transform: rotate(-10deg) skew(50deg);
+  }
+
+  .mixin-loop()
+}
