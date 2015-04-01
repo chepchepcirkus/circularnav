@@ -1,0 +1,5 @@
+$angle: 360;
+$nbitems: 5;
+$centerAngle: $angle / $nbitems;
+$skewedAngle: 90-$centerAngle;
+$rotateAngle: -10px;

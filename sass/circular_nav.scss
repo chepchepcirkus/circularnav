@@ -1,5 +1,6 @@
 @import url(http://netdna.bootstrapcdn.com/font-awesome/2.0/css/font-awesome.css);
-
+@import "_config.scss";
+@import "_mixins.scss";
 * {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -146,7 +147,9 @@ body {
 /* for a central angle x, the list items must be skewed by 90-x degrees
 in our case x=40deg so skew angle is 50deg
 items should be rotated by x, minus (sum of angles - 180)2s (for this demo) */
-@include item(5);
+
+@include item($nbitems);
+
 /*
 .csstransforms .cn-wrapper li:first-child {
   -webkit-transform: rotate(-10deg) skew(50deg);

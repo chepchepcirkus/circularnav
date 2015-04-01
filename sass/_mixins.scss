@@ -1,16 +1,17 @@
-@mixin item($nb-child:5){
-  
-  .mixin-loop ($nb-child) 
+@mixin transform($value){
+    -webkit-transform:$value;
+    -ms-transform:$value;
+    -moz-transform:$value;
+    transform:$value;
 }
 
-.mixin-loop ($i) when ($i > 0) {
-
-  .csstransforms .cn-wrapper li:nth-child($i) {
-    -webkit-transform: rotate(-10deg) skew(50deg);
-    -ms-transform: rotate(-10deg) skew(50deg);
-    -moz-transform: rotate(-10deg) skew(50deg);
-    transform: rotate(-10deg) skew(50deg);
+@mixin rotateAngle($nb){
+    rotate(#{$nb*$centerAngle - $angle}deg);
+}
+@mixin item($nb-child:5){
+  @for $i from 1 through $nb-child {
+    .csstransforms .cn-wrapper li:nth-child(#{$i}) {
+        @include transform( skew(#{$skewedAngle}deg));
+    }
   }
-
-  .mixin-loop()
 }
