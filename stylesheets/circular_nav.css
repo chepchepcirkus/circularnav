@@ -1,83 +1,331 @@
-/*
-Error: Invalid CSS after "...e - $angle}deg)": expected "{", was ";"
-        on line 9 of /var/www/circularnav/sass/_mixins.scss
-        from line 3 of /var/www/circularnav/./sass/circular_nav.scss
+@charset "UTF-8";
+@import url(http://netdna.bootstrapcdn.com/font-awesome/2.0/css/font-awesome.css);
+/* line 5, ../sass/circular_nav.scss */
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+}
 
-4:     -moz-transform:$value;
-5:     transform:$value;
-6: }
-7: 
-8: @mixin rotateAngle($nb){
-9:     rotate(#{$nb*$centerAngle - $angle}deg);
-10: }
-11: @mixin item($nb-child:5){
-12:   @for $i from 1 through $nb-child {
-13:     .csstransforms .cn-wrapper li:nth-child(#{$i}) {
-14:         @include transform( skew(#{$skewedAngle}deg));
+/* line 14, ../sass/circular_nav.scss */
+html,
+body {
+  height: 100%;
+}
 
-Backtrace:
-/var/www/circularnav/sass/_mixins.scss:9
-/var/www/circularnav/./sass/circular_nav.scss:3
-/var/lib/gems/1.9.1/gems/sass-3.4.9/lib/sass/scss/parser.rb:1167:in `expected'
-/var/lib/gems/1.9.1/gems/sass-3.4.9/lib/sass/scss/parser.rb:1101:in `expected'
-/var/lib/gems/1.9.1/gems/sass-3.4.9/lib/sass/scss/parser.rb:1096:in `tok!'
-/var/lib/gems/1.9.1/gems/sass-3.4.9/lib/sass/scss/parser.rb:641:in `block'
-/var/lib/gems/1.9.1/gems/sass-3.4.9/lib/sass/scss/parser.rb:712:in `declaration_or_ruleset'
-/var/lib/gems/1.9.1/gems/sass-3.4.9/lib/sass/scss/parser.rb:661:in `block_child'
-/var/lib/gems/1.9.1/gems/sass-3.4.9/lib/sass/scss/parser.rb:650:in `block_contents'
-/var/lib/gems/1.9.1/gems/sass-3.4.9/lib/sass/scss/parser.rb:642:in `block'
-/var/lib/gems/1.9.1/gems/sass-3.4.9/lib/sass/scss/parser.rb:231:in `mixin_directive'
-/var/lib/gems/1.9.1/gems/sass-3.4.9/lib/sass/scss/parser.rb:219:in `special_directive'
-/var/lib/gems/1.9.1/gems/sass-3.4.9/lib/sass/scss/parser.rb:194:in `directive'
-/var/lib/gems/1.9.1/gems/sass-3.4.9/lib/sass/scss/parser.rb:660:in `block_child'
-/var/lib/gems/1.9.1/gems/sass-3.4.9/lib/sass/scss/parser.rb:653:in `block_contents'
-/var/lib/gems/1.9.1/gems/sass-3.4.9/lib/sass/scss/parser.rb:117:in `stylesheet'
-/var/lib/gems/1.9.1/gems/sass-3.4.9/lib/sass/scss/parser.rb:42:in `parse'
-/var/lib/gems/1.9.1/gems/sass-3.4.9/lib/sass/engine.rb:393:in `_to_tree'
-/var/lib/gems/1.9.1/gems/sass-3.4.9/lib/sass/engine.rb:299:in `to_tree'
-/var/lib/gems/1.9.1/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:313:in `block in visit_import'
-/var/lib/gems/1.9.1/gems/sass-3.4.9/lib/sass/stack.rb:88:in `block in with_import'
-/var/lib/gems/1.9.1/gems/sass-3.4.9/lib/sass/stack.rb:115:in `with_frame'
-/var/lib/gems/1.9.1/gems/sass-3.4.9/lib/sass/stack.rb:88:in `with_import'
-/var/lib/gems/1.9.1/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:312:in `visit_import'
-/var/lib/gems/1.9.1/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
-/var/lib/gems/1.9.1/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-/var/lib/gems/1.9.1/gems/sass-3.4.9/lib/sass/stack.rb:79:in `block in with_base'
-/var/lib/gems/1.9.1/gems/sass-3.4.9/lib/sass/stack.rb:115:in `with_frame'
-/var/lib/gems/1.9.1/gems/sass-3.4.9/lib/sass/stack.rb:79:in `with_base'
-/var/lib/gems/1.9.1/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:158:in `visit'
-/var/lib/gems/1.9.1/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/var/lib/gems/1.9.1/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `map'
-/var/lib/gems/1.9.1/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/var/lib/gems/1.9.1/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
-/var/lib/gems/1.9.1/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-/var/lib/gems/1.9.1/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
-/var/lib/gems/1.9.1/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/var/lib/gems/1.9.1/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
-/var/lib/gems/1.9.1/gems/sass-3.4.9/lib/sass/tree/visitors/base.rb:36:in `visit'
-/var/lib/gems/1.9.1/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:157:in `visit'
-/var/lib/gems/1.9.1/gems/sass-3.4.9/lib/sass/tree/visitors/perform.rb:8:in `visit'
-/var/lib/gems/1.9.1/gems/sass-3.4.9/lib/sass/tree/root_node.rb:36:in `css_tree'
-/var/lib/gems/1.9.1/gems/sass-3.4.9/lib/sass/tree/root_node.rb:20:in `render'
-/var/lib/gems/1.9.1/gems/sass-3.4.9/lib/sass/engine.rb:268:in `render'
-/var/lib/gems/1.9.1/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:17:in `block in render'
-/var/lib/gems/1.9.1/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:29:in `with_import_scope'
-/var/lib/gems/1.9.1/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:16:in `render'
-/var/lib/gems/1.9.1/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
-/var/lib/gems/1.9.1/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/var/lib/gems/1.9.1/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:209:in `each'
-/var/lib/gems/1.9.1/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/var/lib/gems/1.9.1/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:470:in `on_file_changed'
-/var/lib/gems/1.9.1/gems/sass-3.4.9/lib/sass/plugin/compiler.rb:328:in `block in watch'
-/var/lib/gems/1.9.1/gems/sass-3.4.9/vendor/listen/lib/listen/listener.rb:252:in `call'
-/var/lib/gems/1.9.1/gems/sass-3.4.9/vendor/listen/lib/listen/listener.rb:252:in `on_change'
-/var/lib/gems/1.9.1/gems/sass-3.4.9/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
-/var/lib/gems/1.9.1/gems/sass-3.4.9/vendor/listen/lib/listen/adapter.rb:254:in `call'
-/var/lib/gems/1.9.1/gems/sass-3.4.9/vendor/listen/lib/listen/adapter.rb:254:in `report_changes'
-/var/lib/gems/1.9.1/gems/sass-3.4.9/vendor/listen/lib/listen/adapter.rb:323:in `poll_changed_directories'
-/var/lib/gems/1.9.1/gems/sass-3.4.9/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"...e - $angle}deg)\": expected \"{\", was \";\"\A         on line 9 of /var/www/circularnav/sass/_mixins.scss\A         from line 3 of /var/www/circularnav/./sass/circular_nav.scss\A \A 4:     -moz-transform:$value;\A 5:     transform:$value;\A 6: }\A 7: \A 8: @mixin rotateAngle($nb){\A 9:     rotate(#{$nb*$centerAngle - $angle}deg);\A 10: }\A 11: @mixin item($nb-child:5){\A 12:   @for $i from 1 through $nb-child {\A 13:     .csstransforms .cn-wrapper li:nth-child(#{$i}) {\A 14:         @include transform( skew(#{$skewedAngle}deg));"; }
+/* line 19, ../sass/circular_nav.scss */
+body {
+  background: #f06060;
+  color: #fff;
+}
+
+/* line 24, ../sass/circular_nav.scss */
+.csstransforms .cn-wrapper {
+  font-size: 1em;
+  width: 26em;
+  height: 26em;
+  overflow: hidden;
+  position: fixed;
+  z-index: 10;
+  bottom: -13em;
+  left: 50%;
+  border-radius: 50%;
+  margin-left: -13em;
+  -webkit-transform: scale(0.1);
+  -ms-transform: scale(0.1);
+  -moz-transform: scale(0.1);
+  transform: scale(0.1);
+  pointer-events: none;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+/* line 45, ../sass/circular_nav.scss */
+.csstransforms .opened-nav {
+  border-radius: 50%;
+  pointer-events: auto;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+/* line 54, ../sass/circular_nav.scss */
+.cn-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  transition: all .3s ease;
+  z-index: 2;
+}
+
+/* line 71, ../sass/circular_nav.scss */
+.cn-overlay.on-overlay {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* line 76, ../sass/circular_nav.scss */
+.cn-button {
+  border: none;
+  background: none;
+  color: #f06060;
+  text-align: center;
+  font-size: 1.8em;
+  padding-bottom: 1em;
+  height: 3.5em;
+  width: 3.5em;
+  background-color: #fff;
+  position: fixed;
+  left: 50%;
+  margin-left: -1.75em;
+  bottom: -1.75em;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 11;
+}
+
+/* line 95, ../sass/circular_nav.scss */
+.cn-button:hover,
+.cn-button:active,
+.cn-button:focus {
+  color: #aa1010;
+}
+
+/* line 101, ../sass/circular_nav.scss */
+.csstransforms .cn-wrapper li {
+  position: absolute;
+  font-size: 1.5em;
+  width: 10em;
+  height: 10em;
+  -webkit-transform-origin: 100% 100%;
+  -moz-transform-origin: 100% 100%;
+  -ms-transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
+  overflow: hidden;
+  left: 50%;
+  top: 50%;
+  margin-top: -1.3em;
+  margin-left: -10em;
+  -webkit-transition: border .3s ease;
+  -moz-transition: border .3s ease;
+  transition: border .3s ease;
+}
+
+/* line 120, ../sass/circular_nav.scss */
+.csstransforms .cn-wrapper li a {
+  display: block;
+  font-size: 1.18em;
+  height: 14.5em;
+  width: 14.5em;
+  position: absolute;
+  bottom: -7.25em;
+  right: -7.25em;
+  border-radius: 50%;
+  text-decoration: none;
+  color: #fff;
+  padding-top: 1.8em;
+  text-align: center;
+  -webkit-transform: skew(-36deg) rotate(-90 – 18deg) scale(1);
+  -ms-transform: skew(-36deg) rotate(-90 – 18deg) scale(1);
+  -moz-transform: skew(-36deg) rotate(-90 – 18deg) scale(1);
+  transform: skew(-36deg) rotate(-90 – 18deg) scale(1);
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: opacity 0.3s, color 0.3s;
+  -moz-transition: opacity 0.3s, color 0.3s;
+  transition: opacity 0.3s, color 0.3s;
+}
+
+/* line 140, ../sass/circular_nav.scss */
+.csstransforms .cn-wrapper li a span {
+  font-size: 1.1em;
+  opacity: 0.7;
+}
+
+/* for a central angle x, the list items must be skewed by 90-x degrees
+in our case x=40deg so skew angle is 50deg
+items should be rotated by x, minus (sum of angles - 180)2s (for this demo) */
+/* line 11, ../sass/_mixins.scss */
+.csstransforms .opened-nav li:nth-child(5) {
+  -webkit-transform: rotate(90deg) skew(54deg);
+  -ms-transform: rotate(90deg) skew(54deg);
+  -moz-transform: rotate(90deg) skew(54deg);
+  transform: rotate(90deg) skew(54deg);
+}
+
+/* line 11, ../sass/_mixins.scss */
+.csstransforms .opened-nav li:nth-child(4) {
+  -webkit-transform: rotate(72deg) skew(54deg);
+  -ms-transform: rotate(72deg) skew(54deg);
+  -moz-transform: rotate(72deg) skew(54deg);
+  transform: rotate(72deg) skew(54deg);
+}
+
+/* line 11, ../sass/_mixins.scss */
+.csstransforms .opened-nav li:nth-child(3) {
+  -webkit-transform: rotate(54deg) skew(54deg);
+  -ms-transform: rotate(54deg) skew(54deg);
+  -moz-transform: rotate(54deg) skew(54deg);
+  transform: rotate(54deg) skew(54deg);
+}
+
+/* line 11, ../sass/_mixins.scss */
+.csstransforms .opened-nav li:nth-child(2) {
+  -webkit-transform: rotate(36deg) skew(54deg);
+  -ms-transform: rotate(36deg) skew(54deg);
+  -moz-transform: rotate(36deg) skew(54deg);
+  transform: rotate(36deg) skew(54deg);
+}
+
+/* line 11, ../sass/_mixins.scss */
+.csstransforms .opened-nav li:nth-child(1) {
+  -webkit-transform: rotate(18deg) skew(54deg);
+  -ms-transform: rotate(18deg) skew(54deg);
+  -moz-transform: rotate(18deg) skew(54deg);
+  transform: rotate(18deg) skew(54deg);
+}
+
+/* line 11, ../sass/_mixins.scss */
+.csstransforms .opened-nav li:nth-child(0) {
+  -webkit-transform: rotate(0deg) skew(54deg);
+  -ms-transform: rotate(0deg) skew(54deg);
+  -moz-transform: rotate(0deg) skew(54deg);
+  transform: rotate(0deg) skew(54deg);
+}
+
+/* line 151, ../sass/circular_nav.scss */
+.csstransforms .cn-wrapper li:nth-child(odd) a {
+  background-color: #a11313;
+  background-color: #f44e4e;
+}
+
+/* line 156, ../sass/circular_nav.scss */
+.csstransforms .cn-wrapper li:nth-child(even) a {
+  background-color: #a61414;
+  background-color: #f45757;
+}
+
+/* active style */
+/* line 162, ../sass/circular_nav.scss */
+.csstransforms .cn-wrapper li.active a {
+  background-color: #b31515;
+  background-color: #f66f6f;
+}
+
+/* hover style */
+/* line 169, ../sass/circular_nav.scss */
+.csstransforms .cn-wrapper li:not(.active) a:hover,
+.csstransforms .cn-wrapper li:not(.active) a:active,
+.csstransforms .cn-wrapper li:not(.active) a:focus {
+  background-color: #b31515;
+  background-color: #f66f6f;
+}
+
+/* line 175, ../sass/circular_nav.scss */
+.csstransforms .cn-wrapper li:not(.active) a:focus {
+  position: fixed;
+}
+
+/* fallback */
+/* line 182, ../sass/circular_nav.scss */
+.no-csstransforms .cn-button {
+  display: none;
+}
+
+/* line 186, ../sass/circular_nav.scss */
+.no-csstransforms .cn-wrapper li {
+  position: static;
+  float: left;
+  font-size: 1em;
+  height: 5em;
+  width: 5em;
+  background-color: #eee;
+  text-align: center;
+  line-height: 5em;
+}
+
+/* line 197, ../sass/circular_nav.scss */
+.no-csstransforms .cn-wrapper li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.3em;
+  border-right: 1px solid #ddd;
+}
+
+/* line 207, ../sass/circular_nav.scss */
+.no-csstransforms .cn-wrapper li a:last-child {
+  border: none;
+}
+
+/* line 211, ../sass/circular_nav.scss */
+.no-csstransforms .cn-wrapper li a:hover,
+.no-csstransforms .cn-wrapper li a:active,
+.no-csstransforms .cn-wrapper li a:focus {
+  background-color: white;
+}
+
+/* line 217, ../sass/circular_nav.scss */
+.no-csstransforms .cn-wrapper li.active a {
+  background-color: #6F325C;
+  color: #fff;
+}
+
+/* line 222, ../sass/circular_nav.scss */
+.no-csstransforms .cn-wrapper {
+  font-size: 1em;
+  height: 5em;
+  width: 25.15em;
+  bottom: 0;
+  margin-left: -12.5em;
+  overflow: hidden;
+  position: fixed;
+  z-index: 10;
+  left: 50%;
+  border: 1px solid #ddd;
+}
+
+@media screen and (max-width: 480px) {
+  /* line 236, ../sass/circular_nav.scss */
+  .csstransforms .cn-wrapper {
+    font-size: .68em;
+  }
+
+  /* line 240, ../sass/circular_nav.scss */
+  .cn-button {
+    font-size: 1em;
+  }
+
+  /* line 244, ../sass/circular_nav.scss */
+  .csstransforms .cn-wrapper li {
+    font-size: 1.52em;
+  }
+}
+@media screen and (max-width: 320px) {
+  /* line 250, ../sass/circular_nav.scss */
+  .no-csstransforms .cn-wrapper {
+    width: 15.15px;
+    margin-left: -7.5em;
+  }
+
+  /* line 255, ../sass/circular_nav.scss */
+  .no-csstransforms .cn-wrapper li {
+    height: 3em;
+    width: 3em;
+  }
+}

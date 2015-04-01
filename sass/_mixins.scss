@@ -5,13 +5,11 @@
     transform:$value;
 }
 
-@mixin rotateAngle($nb){
-    rotate(#{$nb*$centerAngle - $angle}deg);
-}
 @mixin item($nb-child:5){
-  @for $i from 1 through $nb-child {
-    .csstransforms .cn-wrapper li:nth-child(#{$i}) {
-        @include transform( skew(#{$skewedAngle}deg));
+  @for $i from 0 through $nb-child {
+    $rotate: -((($i*$centerAngle) - $angle)/2);
+    .csstransforms .opened-nav li:nth-child(#{$nb-child - $i}) {
+        @include transform(rotate(#{$rotate}deg) skew(#{$skewedAngle}deg));
     }
   }
 }
