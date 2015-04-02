@@ -1,0 +1,11 @@
+@function calc-center-angle() {
+  @return $angle/$nbitems;
+}
+
+@function calc-skewed-angle() {
+  @return 90-(calc-center-angle());
+}
+
+@function calc-rotate-angle() {
+  @return 90-((calc-center-angle())/2);
+}

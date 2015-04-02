@@ -130,7 +130,7 @@ body {
   color: #fff;
   padding-top: 1.8em;
   text-align: center;
-  @include transform(skew(-#{$centerAngle}deg) rotate(#{$rotateAngle}deg) scale(1));
+  @include transform(rotate(#{-$rotateAngle}deg) skew(#{-$skewedAngle}deg) scale(1));
   -webkit-backface-visibility: hidden;
   -webkit-transition: opacity 0.3s, color 0.3s;
   -moz-transition: opacity 0.3s, color 0.3s;

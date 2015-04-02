@@ -1,5 +1,8 @@
-$angle: 180;
-$nbitems: 5;
-$centerAngle: $angle / $nbitems;
-$skewedAngle: 90 - $centerAngle;
-$rotateAngle: -(90 – $centerAngle/2);
+$angle:180;
+$nbitems:5;
+
+@import "_functions.scss";
+
+$centerAngle:calc-center-angle();
+$rotateAngle:calc-rotate-angle();
+$skewedAngle:calc-skewed-angle();
