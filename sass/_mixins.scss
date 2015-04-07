@@ -6,9 +6,10 @@
 }
 
 @mixin item($nb-child:5){
+  $centerA :calc-center-angle();
   @for $i from 0 through $nb-child {
-    $rotate: -((($i*calc-center-angle()) - $angle)/2);
-    .csstransforms .opened-nav li:nth-child(#{$nb-child - $i}) {
+    $rotate: ($i*$centerA)-$centerA;
+    .csstransforms .opened-nav li:nth-child(#{$i}) {
         @include transform(rotate(#{$rotate}deg) skew(#{calc-skewed-angle()}deg));
     }
   }

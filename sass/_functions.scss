@@ -7,5 +7,5 @@
 }
 
 @function calc-rotate-angle() {
-  @return 90-((calc-center-angle())/2);
+  @return 90-(calc-center-angle()/2);
 }

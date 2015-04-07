@@ -1,6 +1,4 @@
 @import url(http://netdna.bootstrapcdn.com/font-awesome/2.0/css/font-awesome.css);
-@import "_config.scss";
-@import "_mixins.scss";
 
 * {
   -moz-box-sizing: border-box;
@@ -130,7 +128,10 @@ body {
   color: #fff;
   padding-top: 1.8em;
   text-align: center;
-  @include transform(skew(#{-$skewedAngle}deg) rotate(#{-$rotateAngle}deg) scale(1));
+  -webkit-transform: skew(-50deg) rotate(-70deg) scale(1);
+  -ms-transform: skew(-50deg) rotate(-70deg) scale(1);
+  -moz-transform: skew(-50deg) rotate(-70deg) scale(1);
+  transform: skew(-50deg) rotate(-70deg) scale(1);
   -webkit-backface-visibility: hidden;
   -webkit-transition: opacity 0.3s, color 0.3s;
   -moz-transition: opacity 0.3s, color 0.3s;
@@ -141,12 +142,45 @@ body {
   font-size: 1.1em;
   opacity: 0.7;
 }
+
 /* for a central angle x, the list items must be skewed by 90-x degrees
 in our case x=40deg so skew angle is 50deg
 items should be rotated by x, minus (sum of angles - 180)2s (for this demo) */
 
-@include item($nbitems);
+.csstransforms .cn-wrapper li:first-child {
+  -webkit-transform: rotate(-10deg) skew(50deg);
+  -ms-transform: rotate(-10deg) skew(50deg);
+  -moz-transform: rotate(-10deg) skew(50deg);
+  transform: rotate(-10deg) skew(50deg);
+}
 
+.csstransforms .cn-wrapper li:nth-child(2) {
+  -webkit-transform: rotate(30deg) skew(50deg);
+  -ms-transform: rotate(30deg) skew(50deg);
+  -moz-transform: rotate(30deg) skew(50deg);
+  transform: rotate(30deg) skew(50deg);
+}
+
+.csstransforms .cn-wrapper li:nth-child(3) {
+  -webkit-transform: rotate(70deg) skew(50deg);
+  -ms-transform: rotate(70deg) skew(50deg);
+  -moz-transform: rotate(70deg) skew(50deg);
+  transform: rotate(70deg) skew(50deg)
+}
+
+.csstransforms .cn-wrapper li:nth-child(4) {
+  -webkit-transform: rotate(110deg) skew(50deg);
+  -ms-transform: rotate(110deg) skew(50deg);
+  -moz-transform: rotate(110deg) skew(50deg);
+  transform: rotate(110deg) skew(50deg);
+}
+
+.csstransforms .cn-wrapper li:nth-child(5) {
+  -webkit-transform: rotate(150deg) skew(50deg);
+  -ms-transform: rotate(150deg) skew(50deg);
+  -moz-transform: rotate(150deg) skew(50deg);
+  transform: rotate(150deg) skew(50deg);
+}
 
 .csstransforms .cn-wrapper li:nth-child(odd) a {
   background-color: #a11313;
@@ -174,9 +208,9 @@ items should be rotated by x, minus (sum of angles - 180)2s (for this demo) */
 }
 .csstransforms .cn-wrapper li:not(.active) a:focus
 {
-  position:fixed;
+    position:fixed;
 }
-
+ 
 
 /* fallback */
 .no-csstransforms .cn-button {
