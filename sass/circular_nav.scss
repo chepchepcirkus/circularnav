@@ -41,6 +41,12 @@ body {
   -moz-transition: all .3s ease;
   transition: all .3s ease;
 }
+.right-position{
+    .cn-wrapper {
+      right: -13em;
+      left:inherit;
+    }
+}
 
 .csstransforms .opened-nav {
   border-radius: 50%;
@@ -91,6 +97,12 @@ body {
   cursor: pointer;
   z-index: 11;
 }
+.right-position{
+    .cn-button {
+      right: -50px;
+      left:inherit;
+    }
+}
 
 .cn-button:hover,
 .cn-button:active,
@@ -123,8 +135,8 @@ body {
   height: 14.5em;
   width: 14.5em;
   position: absolute;
-  bottom: -7.25em;
-  right: -7.25em;
+  bottom: -6.5em;
+  right: -6.5em;
   border-radius: 50%;
   text-decoration: none;
   color: #fff;
@@ -132,9 +144,19 @@ body {
   text-align: center;
   @include transform(skew(#{-$skewedAngle}deg) rotate(#{-$rotateAngle}deg) scale(1));
   -webkit-backface-visibility: hidden;
-  -webkit-transition: opacity 0.3s, color 0.3s;
-  -moz-transition: opacity 0.3s, color 0.3s;
-  transition: opacity 0.3s, color 0.3s;
+  -webkit-transition: opacity 0.3s, color 0.3s, bottom 0.3s, right 0.4s;
+  -moz-transition: opacity 0.3s, color 0.3s, bottom 0.3s, right 0.4s;
+  transition: opacity 0.3s, color 0.3s, bottom 0.3s, right 0.4s;
+}
+
+.csstransforms .cn-wrapper.opened-nav li a {
+
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: opacity 0.3s, color 0.3s, bottom 0.3s, right 0.4s ease-in-out 0.2s;
+  -moz-transition: opacity 0.3s, color 0.3s, bottom 0.3s, right 0.4s ease-in-out 0.2s;
+  transition: opacity 0.3s, color 0.3s, bottom 0.3s, right 0.4s ease-in-out 0.2s;
+  bottom: -7.25em;
+  right: -7.25em;
 }
 
 .csstransforms .cn-wrapper li a span {
